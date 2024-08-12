@@ -1,0 +1,8 @@
+{
+  "extends": "react-app",
+  "rules": {
+    // Disable prop types validation
+    "react/prop-types": "off"
+    // other rules...
+  }
+}
