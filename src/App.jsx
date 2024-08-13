@@ -10,27 +10,38 @@ import City from "./components/City";
 import Form from "./components/Form";
 import CountryList from "./components/CountryList";
 import { CitiesProvider } from "./contexts/CityContext";
+import { AuthProvider } from "./contexts/FakeAuthContext";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 function App() {
   return (
-    <CitiesProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<Homepage />} index />
-          <Route element={<Pricing />} path="pricing" />
-          <Route element={<Product />} path="product" />
-          <Route element={<Login />} path="/login" />
-          <Route element={<AppLayout />} path="/app">
-            <Route index element={<Navigate to="cities" replace />} />
-            <Route path="cities" element={<CityList />} />
-            <Route path="cities/:id" element={<City />} />
-            <Route path="countries" element={<CountryList />} />
-            <Route path="form" element={<Form />} />
-          </Route>
-          <Route element={<PageNotFound />} path="*" />
-        </Routes>
-      </BrowserRouter>
-    </CitiesProvider>
+    <AuthProvider>
+      <CitiesProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Homepage />} index />
+            <Route element={<Pricing />} path="pricing" />
+            <Route element={<Product />} path="product" />
+            <Route element={<Login />} path="/login" />
+            <Route
+              element={
+                <ProtectedRoute>
+                  <AppLayout />
+                </ProtectedRoute>
+              }
+              path="/app"
+            >
+              <Route index element={<Navigate to="cities" replace />} />
+              <Route path="cities" element={<CityList />} />
+              <Route path="cities/:id" element={<City />} />
+              <Route path="countries" element={<CountryList />} />
+              <Route path="form" element={<Form />} />
+            </Route>
+            <Route element={<PageNotFound />} path="*" />
+          </Routes>
+        </BrowserRouter>
+      </CitiesProvider>
+    </AuthProvider>
   );
 }
 
