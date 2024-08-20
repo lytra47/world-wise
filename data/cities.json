@@ -13,40 +13,40 @@
       "id": 73930385
     },
     {
-      "cityName": "Madrid",
+      "cityName": "San Pablo de los Montes",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "date": "2024-08-20T01:43:30.253Z",
+      "notes": "Test",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "39.52396837325433",
+        "lng": "-4.416504286325931"
       },
-      "id": 17806751
+      "id": 73930386
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
-      "cityName": "Villagarcia del Llano",
+      "cityName": "Fuentes de Ebro",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2024-08-13T09:42:02.191Z",
+      "date": "2024-08-20T01:43:51.082Z",
       "notes": "",
       "position": {
-        "lat": "39.33238904073973",
-        "lng": "-1.8249380914097315"
+        "lat": "41.54428784972461",
+        "lng": "-0.6372077364859496"
       },
-      "id": 98443198
+      "id": 73930387
+    },
+    {
+      "cityName": "Mara",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-08-20T08:57:21.780Z",
+      "notes": "",
+      "position": {
+        "lat": "41.294316700478156",
+        "lng": "-1.53421703803742"
+      },
+      "id": 73930388
     }
   ]
 }
